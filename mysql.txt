@@ -1,0 +1,9 @@
+mysql存储dict单词
+1、创建库dict
+create database dict default charset=utf8;
+2、创建user表
+create table user (id int primary key auto_increment,name varchar(32) not null,passwd varchar(16) default '000000');
+3、创建hist表
+create table hist(id int auto_increment primary key,name varchar(32) not null,word varchar(32) not null,time varchar(64));
+4、创建words表 
+create table words (id int auto_increment primary key,word varchar(32) not null,interpret text not null);
